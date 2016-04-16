@@ -46,24 +46,34 @@ public class MainActivity extends AppCompatActivity {
         }.execute();
     }
 
+    /**
+     * Method to fetch contact's from device
+     */
     private void getContactDataBefore(){
         int i=0;
+
+        // query all contact id's from device
         Cursor c1 = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,
                     new String[]{ContactsContract.Contacts._ID},null,null,null);
 
         if((c1 != null) && c1.moveToFirst()){
 
+            // add contact id's to the mIDs list
             do{
                 mIDs.add(c1.getString(c1.getColumnIndexOrThrow(ContactsContract.Contacts._ID)));
 
-                Cursor c2 = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                // query all contact numbers corresponding to current id
+                Cursor c2 = getContentResolver()
+                        .query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                         new String[]{ContactsContract.CommonDataKinds.Phone.NUMBER},
                         ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=?",
                         new String[]{mIDs.get(i)},null);
 
                 if(c2 != null && c2.moveToFirst()){
+                    // add contact number's to the mNumbers list
                     do{
-                        mNumbers.add(c2.getString(c2.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER)));
+                        mNumbers.add(c2.getString(c2
+                                .getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER)));
                     }while (c2.moveToNext());
                     c2.close();
                 }
@@ -75,9 +85,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method to fetch contacts after updation (for logging purposes)
+     */
     private void getContactDataAfter(){
-        Cursor c = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,
-                    null,null,null,null);
+        Cursor c = getContentResolver()
+                .query(ContactsContract.Contacts.CONTENT_URI, null,null,null,null);
 
         List<String> RIds = new ArrayList<>();
         mIDs = new ArrayList<>();
@@ -91,7 +104,8 @@ public class MainActivity extends AppCompatActivity {
                 mNames.add(c.getString(c
                         .getColumnIndexOrThrow(ContactsContract.Contacts.DISPLAY_NAME)));
 
-                Cursor c2 = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                Cursor c2 = getContentResolver()
+                        .query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                         new String[]{ContactsContract.CommonDataKinds.Phone.NUMBER},
                         ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=?",
                         new String[]{mIDs.get(i)},null);
@@ -104,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
                     c2.close();
                 }
 
-                Cursor rawcontacts = getContentResolver().query(ContactsContract.RawContacts.CONTENT_URI,
+                Cursor rawcontacts = getContentResolver()
+                        .query(ContactsContract.RawContacts.CONTENT_URI,
                         new String[]{ContactsContract.RawContacts._ID},
                         ContactsContract.RawContacts.CONTACT_ID + "=?",
                         new String[]{mIDs.get(i)},null);
