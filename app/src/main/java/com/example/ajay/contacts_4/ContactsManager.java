@@ -66,7 +66,7 @@ public class ContactsManager {
                     .withValue(ContactsContract.Data.MIMETYPE, MIMETYPE)
                     .withValue(ContactsContract.Data.DATA1, 12345)
                     .withValue(ContactsContract.Data.DATA2, "user")
-                    .withValue(ContactsContract.Data.DATA3, "MyData")
+                    .withValue(ContactsContract.Data.DATA3, "ContactsDemo")
                     .build());
 
             try {
