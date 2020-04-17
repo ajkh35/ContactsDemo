@@ -21,24 +21,28 @@ node app.js
 Then launch the app
 
 First screen:
-![MainScreen] (/resources/images/SyncContacts1.jpg)
+![MainScreen](/resources/images/SyncContacts1.jpg)
 
 ### Register Number
 
 Register number:
-![Register] (/resources/images/SyncContacts2.jpg)
+
+![Register](/resources/images/SyncContacts2.jpg)
 
 Click Refresh Contacts
 
 Number registered:
-![ContactsScreen] (/resources/images/SyncContacts3.jpg)
+
+![ContactsScreen](/resources/images/SyncContacts3.jpg)
 
 ### Deregister Number
 
 Deregister number:
-![Deregister] (/resources/images/SyncContacts4.jpg)
+
+![Deregister](/resources/images/SyncContacts4.jpg)
 
 Click Refresh Contacts
 
 Number deregistered:
-![ContactsScreen] (/resources/images/SyncContacts5.jpg)
+
+![ContactsScreen](/resources/images/SyncContacts5.jpg)
