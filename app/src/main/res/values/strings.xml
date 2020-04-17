@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SyncContacts</string>
+    <string name="refresh_contacts">Refresh Contacts</string>
+    <string name="text_for_button">Press this button to manually sync contacts with server. Periodic sync is already on with a time interval of about 15 minutes(Min.).</string>
+    <string name="permissions_alert_text">Please allow the permissions to the app and Restart the app.</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="permissions_alert">Permissions Alert!!</string>
+
+    <string name="messaging">Sending message to</string>
+    <string name="voice_call">Voice calling</string>
+    <string name="video_call">Video calling</string>
+    <string name="enter_number">Enter number</string>
+    <string name="register_number">Register number</string>
+    <string name="deregister_Number">Deregister number</string>
+</resources>
