@@ -65,5 +65,5 @@ Then launch the app <br /><br />
 
 Checkout the new blog that explains the cogs in motion for the app:
 
-Syncing Contacts with an Android Application
-[Ajay's Blog](https://ajkh35.blogspot.com/2020/04/syncing-contacts-with-android.html)
+
+[Syncing Contacts with an Android Application](https://ajkh35.blogspot.com/2020/04/syncing-contacts-with-android.html)
