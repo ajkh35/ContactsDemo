@@ -18,6 +18,13 @@ Use command node to start the server on localhost:3000
 cd demo_server
 node app.js
 ```
+In case the server does not start, just delete node_modules folder and run
+
+```bash
+npm install
+```
+<br /><br />
+
 Then launch the app
 
 
@@ -28,30 +35,29 @@ Then launch the app
 
 ### Register Number
 
-Register number:
+1. Register number:
 
 ![Register](/resources/images/SyncContacts2.jpg) <br /><br />
 
 
-**Click Refresh Contacts**
+2. **Click Refresh Contacts** <br /><br />
 
 
-Number registered:
+3. Number registered:
 
-![ContactsScreen](/resources/images/SyncContacts3.jpg) <br /><br />
-
+![ContactsScreen](/resources/images/SyncContacts3.jpg) <br /><br /> <br /><br />
 
 
 ### Deregister Number
 
-Deregister number:
+1. Deregister number:
 
 ![Deregister](/resources/images/SyncContacts4.jpg) <br /><br />
 
 
-**Click Refresh Contacts**
+2. **Click Refresh Contacts** <br /><br />
 
 
-Number deregistered:
+3. Number deregistered:
 
 ![ContactsScreen](/resources/images/SyncContacts5.jpg)
