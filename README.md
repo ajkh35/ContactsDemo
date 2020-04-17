@@ -2,6 +2,13 @@
 
 Hi guys. This is the version 2 of the ContactsDemo app. I have made some improvements after everyone's experience with the previous app. I will highlight some of those changes here.
 
+## Blog
+
+Checkout the new blog that explains the cogs in motion for the app:
+
+
+[Syncing Contacts with an Android Application](https://ajkh35.blogspot.com/2020/04/syncing-contacts-with-android.html)
+
 ## Kotlin
 
 I have switched the programming language to Kotlin for this app. I hope this will make the code more concise and easy to read.
@@ -60,10 +67,3 @@ Then launch the app <br /><br />
 3. Number deregistered:
 
 ![ContactsScreen](/resources/images/SyncContacts5.jpg) <br /><br />
-
-## Blog
-
-Checkout the new blog that explains the cogs in motion for the app:
-
-
-[Syncing Contacts with an Android Application](https://ajkh35.blogspot.com/2020/04/syncing-contacts-with-android.html)
