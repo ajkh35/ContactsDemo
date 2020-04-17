@@ -23,9 +23,8 @@ In case the server does not start, just delete node_modules folder and run
 ```bash
 npm install
 ```
-<br /><br />
 
-Then launch the app
+Then launch the app <br /><br />
 
 
 ### First screen
@@ -60,4 +59,11 @@ Then launch the app
 
 3. Number deregistered:
 
-![ContactsScreen](/resources/images/SyncContacts5.jpg)
+![ContactsScreen](/resources/images/SyncContacts5.jpg) <br /><br />
+
+## Blog
+
+Checkout the new blog that explains the cogs in motion for the app:
+
+Syncing Contacts with an Android Application
+[Ajay's Blog](https://ajkh35.blogspot.com/2020/04/syncing-contacts-with-android.html)
