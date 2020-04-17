@@ -21,6 +21,7 @@ node app.js
 Then launch the app
 
 First screen:
+
 ![MainScreen](/resources/images/SyncContacts1.jpg)
 
 ### Register Number
