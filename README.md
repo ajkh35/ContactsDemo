@@ -15,9 +15,21 @@ I have switched the programming language to Kotlin for this app. I hope this wil
 
 ## Demo Server
 
-So this app works in tandem with a very simple node server. The server doesn't do much but maintains a list of numbers. This list is synced with the device's numbers via the SyncAdapter. You will need to have node version 12.16.2 and npm version 6.14.4 to run the server.
+So this app works in tandem with a very simple node server. The server doesn't do much but maintains a list of numbers. This list is synced with the device's numbers via the SyncAdapter.
 
 ## Setup
+
+You will need to install nodejs and npm to run the server. Also you need mysql as the database.
+
+### Installation
+
+1. Install mysql from [here](https://dev.mysql.com/downloads/mysql/) 
+2. Create a database in mysql.
+2. In your database, create a table named "numbers" with a column "number". "number" can be of type varchar(20).
+2. Update the app.js file in the demo_server folder to whatever your user, password and database is.
+4. Now install nodejs from [here](https://nodejs.org/en/download/)
+
+### Startup
 
 Use command node to start the server on localhost:3000
 
@@ -34,9 +46,9 @@ npm install
 Then launch the app <br /><br />
 
 
-### First screen
+### Initially
 
-![MainScreen](/resources/images/SyncContacts1.jpg) <br /><br />
+![MainScreen](/resources/images/SyncContacts1.jpg) ![ContactsScreen](/resources/images/SyncContacts5.jpg) <br /><br />
 
 
 ### Register Number
