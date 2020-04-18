@@ -45,10 +45,34 @@ class SyncAdapter(context: Context, autoInitialize: Boolean): AbstractThreadedSy
          * So first I remove the commas, dash and spaces and then compare
          *
          * If you don't want to use a server
-         * You can replace the {@see SyncAdapter#serverNumberList} with {@see SyncAdapter#dummyServerResponseList}
-         * in the code below and create contacts on your device with the numbers mentioned in the list
+         * You can replace comment out the region Server response and uncomment the region Dummy response.
+         * But again please be careful to check formatting of number on your device and
+         * in {@see SyncAdapter#dummyServerResponseList}. If all goes well all numbers on the device
+         * that match with the list will be synced.
          */
 
+        //region Dummy response
+//        for(contact in mContactsList) {
+//            for(number in contact.numbers) {
+//                if(isNumberAlreadyRegistered(number)) {
+//                    // If number is registered and invalid on server, delete it
+//                    if(!dummyServerResponseList.contains(getFormattedNumber(number))) {
+//                        ContactsManager.deleteNumber(context, number)
+//                    }
+//                } else {
+//                    // If number is not registered and valid on server, register it
+//                    if(dummyServerResponseList.contains(getFormattedNumber(number))) {
+//                        ContactsManager.registerNumber(context, number, contact.name, contact.rawContactIdMap)
+//                    }
+//                }
+//            }
+//        }
+//
+//        // send broadcast response for manual refresh request
+//        context.sendBroadcast(Intent(MainActivity.ACTION_SYNC_COMPLETED))
+        //endregion
+
+        //region Server response
         try {
             val response = ApiClient.getClient().getNumbersList().execute()
             if(response.isSuccessful && response.body() != null) {
@@ -92,6 +116,7 @@ class SyncAdapter(context: Context, autoInitialize: Boolean): AbstractThreadedSy
         } catch (exception: Exception) {
             Log.d(TAG, "Network Failure: ${exception.cause}")
         }
+        //endregion
     }
 
     /**

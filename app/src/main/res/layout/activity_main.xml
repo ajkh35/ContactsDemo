@@ -38,7 +38,7 @@
         app:layout_constraintLeft_toLeftOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
             android:gravity="center"
@@ -73,7 +73,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
             android:gravity="center"
@@ -108,7 +108,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.3"
             android:gravity="center"

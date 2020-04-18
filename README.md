@@ -17,6 +17,20 @@ I have switched the programming language to Kotlin for this app. I hope this wil
 
 So this app works in tandem with a very simple node server. The server doesn't do much but maintains a list of numbers. This list is synced with the device's numbers via the SyncAdapter.
 
+## Don't want a server
+
+Those who do not want to setup a server may skip the Setup part. To work without a server, you simply have to modify the SyncAdapter file a bit and get the app running.
+
+### Steps
+
+1. Open SyncAdapter in your editor or IDE.
+2. Go to performSync() method.
+3. Uncomment region "Dummy response" and comment out region "Server response".
+4. Go to variable "dummyServerResponseList" and add the numbers you want to sync to the list.
+5. Go to getFormattedNumber() method and change it to suit your device's number formatting.
+6. That's it. Run the app and click on button "Refresh Contacts".
+7. If you want to add/remove a number just add/remove it from the list then run the app and click button "Refresh Contacts".
+
 ## Setup
 
 You will need to install nodejs and npm to run the server. Also you need mysql as the database.
